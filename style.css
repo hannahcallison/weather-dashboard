@@ -1,0 +1,12 @@
+#displayCurrent{
+    display: block;
+    border: 3px solid black;
+    width: 50%
+}
+
+#fiveDay {
+    display: block;
+    border: 3px solid black;
+    width: 75%;
+}
+
