@@ -1,3 +1,4 @@
+// Global Variables//
 var searchBar = $("#search")
 var form = $("form")
 var searchHistory = $("#searchHistory")
@@ -13,12 +14,14 @@ var apiKey = "f448b616b40e952f739353b6dc35dd99"
 // Current Weather Display//
 $("form").submit(function(event){
   event.preventDefault()
+  // Resetting text in divs//
   displayCurrent.text("")
   cardOne.text("")
   cardTwo.text("")
   cardThree.text("")
   cardFour.text("")
   cardFive.text("")
+  // Changing display to block//
   displayCurrent.css("display", "block")
   fiveDay.css("display", "block")
   cardOne.css("display", "block")
@@ -34,12 +37,18 @@ $("form").submit(function(event){
       return response.json()
     })
     .then(function(data){
+      // Adding date to current weather data//
       var date = moment().format("MMM Do, YYYY")
       cityDisplay = displayCurrent.append("<h1>" + data.name +":" + " "+ date + "<h1>")
+      // Adding icon from open weather to 'current' div//
       icon = displayCurrent.append(`<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">`);
+      // Adding current Temp from open weather to 'current' div//
       currentTemp = displayCurrent.append("<p>" + "Current Temp: " + data.main.temp + "°F" + "</p>");
+      // Adding current Wind from open weather to 'current' div//
       currentWind = displayCurrent.append("<p>" + "Wind: " + data.wind.speed + " MPH"+ "</p>");
+      // Adding current humidity from open weather to 'current' div//
       currentHumidity = displayCurrent.append("<p>" + "Humidity: " + data.main.humidity + "%"+ "</p>");
+      // Retrieving lat and lon for UV Index data from open weather//
       var lat = data.coord.lat
       var lon = data.coord.lon
       var UVIndexUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial";
@@ -103,14 +112,12 @@ $("form").submit(function(event){
 
 
 
+// Help: Local Storage List//
 
-// for (var i = 0; i < localStorage.length; i++) {
-//   var city = localStorage.getItem(i);
-//   // console.log(localStorage.getItem("City"));
 //   var cityName = $(".list-group").addClass("list-group-item");
 
 //   cityName.append("<li>" + city + "</li>");
-// }
+// } then if they click the button is runs the same function//
 
 
 
