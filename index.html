@@ -19,31 +19,31 @@
 </head>
 
 <body>
-    <h1 class="text-center bg-primary text-white p-3">Weather Dashboard</h1>
+    <h1 id="weather-title">Weather Dashboard</h1>
     <div class="container">
         <div class="row">
-            <div class="">
-                <div>
-                    <h1>Search for a City:</h1>
-                    <form id="form">
-                        <input id="search" class="mb-2" type="text" placeholder="Search...">
-                        <input type="submit" name="submit" id="submitBtn">
-                    </form>
-                    <p id="searchHistory"></p>
-                </div>
-                <div id="displayCurrent">
-                </div>
+            <div id="searchArea">
+                <h2 style="text-align:left">Search for a City:</h2>
+                <form id="form">
+                    <input id="search" class="mb-2" type="text" placeholder="Search...">
+                    <input type="submit" name="submit" id="submitBtn">
+                </form>
+                <p id="searchHistory"></p>
             </div>
-            <div id="fiveDay"></div>
+
+            <div id="displayCurrent" style="display: none"></div>
+
             <!-- 5 card with date temp wind Humidity little pic of weather -->
-            <div id="cardOne"></div>
-            <div id="cardTwo"></div>
-            <div id="cardThree"></div>
-            <div id="cardFour"></div>
-            <div id="cardFive"></div>
+                <h2 id="fiveDayHeader" style="display: none">5 Day Forecast:</h2>
+                <div id="cardOne" style="display: none"></div>
+                <div id="cardTwo" style="display: none"></div>
+                <div id="cardThree" style="display: none"></div>
+                <div id="cardFour" style="display: none"></div>
+                <div id="cardFive" style="display: none"></div>
         </div>
         <!--Linking JS -->
         <script src="./script.js"></script>
+    </div>
 </body>
 
 </html>

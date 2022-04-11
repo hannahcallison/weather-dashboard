@@ -1,12 +1,38 @@
+#weather-title {
+    background-image: linear-gradient(to right, rgb(4, 4, 255) , darkblue);
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+
+#searchArea {
+    margin: 5px;
+    margin-right: 20px;
+    border-bottom: 3px solid grey;
+}
+
 #displayCurrent{
     display: block;
     border: 3px solid black;
-    width: 50%
+    width: 73.5%;
+    margin: 10px;
+    padding: 10px;;
 }
 
-#fiveDay {
-    display: block;
-    border: 3px solid black;
-    width: 75%;
+#cardOne, #cardTwo, #cardThree, #cardFour, #cardFive{
+    border: 3px solid darkblue;
+    margin: 5px;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    width: 14%;
 }
 
+#fiveDayHeader{
+    margin-left: 25.5%;
+    margin-right: 50%;
+}
+
+#cardOne {
+    margin-left: 25.6%;
+}
