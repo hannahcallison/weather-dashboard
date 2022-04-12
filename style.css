@@ -36,3 +36,12 @@
 #cardOne {
     margin-left: 25.6%;
 }
+
+.resultBtn {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: grey;
+    padding: 10px 24px;
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+}
